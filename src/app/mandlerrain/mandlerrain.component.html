@@ -1,0 +1,29 @@
+<p>mandlerrain works!</p>
+<div (keypress)="handleKeypress($event)" tabindex="0">
+    <div>
+        <canvas [attr.width]="xResolution" [attr.height]="yResolution" id="mandlerrain-canvas"></canvas>
+    </div>
+  <!-- <svg
+    viewBox="0 0 500 500"
+    xmlns="<http://www.w3.org/2000/svg>"
+    className="mandlerrain-svg"
+  >
+    <g *ngFor="let colorArray of colors; index as i">
+      <rect
+        *ngFor="let color of colorArray; index as j"
+        [attr.width]="500 / colors.length"
+        [attr.height]="500 / colorArray.length"
+        [attr.x]="(500 / colors.length) * i"
+        [attr.y]="(500 / colorArray.length) * j"
+        [attr.fill]="color"
+        style="stroke-width: 0"
+      />
+    </g>
+  </svg> -->
+  <button type="button" (click)="goUp()">Go Up</button>
+  <button type="button" (click)="goDown()">Go Down</button>
+  <button type="button" (click)="goLeft()">Go Left</button>
+  <button type="button" (click)="goRight()">Go Right</button>
+  <button type="button" (click)="zoomOut()">Zoom Out</button>
+  <button type="button" (click)="zoomIn()">Zoom In</button>
+</div>
